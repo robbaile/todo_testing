@@ -16,4 +16,12 @@ describe ToDoList do
         expect(todo_list.todos.length).to eq 1
         expect(todo_list.todos[0]).to be_instance_of(Todo)
     end 
+
+    it 'should print each todo on separate lines' do
+        todo_list = ToDoList.new
+        todo = Todo.new("Get milk")
+        todo = Todo.new("Get bread")
+
+        expect(todo_list.print).to output("Get milk\nGet bread").to_stdout
+    end
 end 
