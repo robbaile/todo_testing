@@ -7,4 +7,8 @@ class ToDoList
     def add(todo)
         todos << todo
     end
+
+    def print
+        @todos.map { |todo| puts todo.text}
+    end
 end

@@ -19,9 +19,9 @@ describe ToDoList do
 
     it 'should print each todo on separate lines' do
         todo_list = ToDoList.new
-        todo = Todo.new("Get milk")
-        todo = Todo.new("Get bread")
+        todo_list.add(Todo.new("Get milk"))
+        todo_list.add(Todo.new("Get bread"))
 
-        expect(todo_list.print).to output("Get milk\nGet bread").to_stdout
+        expect { todo_list.print }.to output("Get milk\nGet bread\n").to_stdout
     end
 end 
